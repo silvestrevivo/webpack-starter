@@ -17,14 +17,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
+                exclude: /(node_modules)/,
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015']
                 }
             },
             {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                test: /\.sass$/,
+                loader: 'style-loader!css-loader!sass-loader'
             }
         ]
     }
