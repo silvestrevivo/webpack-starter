@@ -1,10 +1,14 @@
 # webpack-starter
-Project starter template built with WebPack. It contains Babel loaders to compile ES6 to ES5, as well as CSS and SASS loaders. It comes ready to install dependencies for React and ReactDom. It refreshs automatcly through the scripts in package.json.
+This is a boilerplate code built with WebPack which it could be used as starter project template. It contains Babel to compile ES6 to ES5 as well as CSS and SASS loaders. It comes ready to install dependencies for React and ReactDom. It refreshs automatcly through the scripts from the package.json file.
 
 ## description
 This template is based on npm package, thus to run it, download the repo to your local computer and then in the folder of your project:
 ```
-$ npm start
+$ npm init //it reads all the dependencies and downloads the node_modules
+
+$ npm start //it runs the server on http://localhost:1234/
+
+$ npm prod //it compiles the bundle.js to send to production
 ```
 If you find problems to load one of the dependencies:
 ```
@@ -20,4 +24,5 @@ $ npm install style-loader css-loader --save-dev //install css and style-loader
 $ npm install node-sass sass-loader --save-dev //install sass-loader
 ```
 
+## installing `jquery`
 #### `new updates comming soon`
