@@ -5,6 +5,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //BOOTSTRAP AND RESPONSIVE BEHAVIOUR
 ////////////////////////////////////////////////////////////////////////////////
+
 //BOOTSTRAP BREAKPOINTS VERSION 3.7.7
 $xs: 480px
 $sm: 768px
@@ -115,46 +116,6 @@ $lg: 1200px
     &::-webkit-input-placeholder
       @content
 
-
-////////////////////////////////////////////////////////////////////////////////
-//VENDOR PREFIX
-////////////////////////////////////////////////////////////////////////////////
-//BORDER-RADIUS  -usage +border-radius(10px)
-@mixin border-radius($radius)
-	-webkit-border-radius: $radius
-	-moz-border-radius: $radius
-	-ms-border-radius: $radius
-	border-radius: $radius
-
-//BOX-SHADOW   -usage +box-shadow(0px 4px 5px #666, 2px 6px 10px #999)
-@mixin box-shadow($shadows...)
-	-webkit-box-shadow: $shadows
-	-moz-box-shadow: $shadows
-	box-shadow: $shadows
-
-//TRANSITIONS  -usage +transition(color .3s ease)
-@mixin transition($args...)
-	-webkit-transition: $args
-	-moz-transition: $args
-	-ms-transition: $args
-	-o-transition: $args
-	transition: $args
-
-//TEXT SHADOW  -usage +text-shadow(3px, 3px, 3px, #333)
-@mixin text-shadow( $top, $left, $blur, $colour)
-	-webkit-text-shadow: $top $left $blur $colour
-	-moz-text-shadow: $top $left $blur $colour
-	-o-text-shadow: $top $left $blur $colour
-	text-shadow: $top $left $blur $colour
-
-//LINEAR-GRADIENT  -usage +background-image: linear-gradient(red, blue);/ @include linear-gradient(red, blue)
-@mixin linear-gradient($direction, $color-stops...)
-	background: nth(nth($color-stops, 1), 1)
-	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
-	background: -moz-linear-gradient(legacy-direction($direction), $color-stops)
-	background: -o-linear-gradient(legacy-direction($direction), $color-stops)
-	background: linear-gradient($direction, $color-stops)
-
 //CLEAR-FIX   -usage +%clearfix;
 %clearfix
 	*zoom: 1
@@ -164,63 +125,10 @@ $lg: 1200px
 	&:after
 		clear: both
 
-//TRANSFORM, ANIMATIONS
-//ROTATE   -usage +rotate(45deg)
-@mixin rotate($val)
-	-webkit-transform: rotate($val)
-	-moz-transform: rotate($val)
-	-ms-transform: rotate($val)
-	-o-transform: rotate($val)
-	transform: rotate($val)
-
-//SKEW   -usage +skew(45deg, 20deg)
-@mixin skew($val)
-	-webkit-transform: skew($val)
-	-moz-transform: skew($val)
-	-ms-transform: skew($val)
-	-o-transform: skew($val)
-	transform: skew($val)
-
-//SCALE   -usage +scale(1.5)
-@mixin scale($val)
-	-webkit-transform: scale($val)
-	-moz-transform: scale($val)
-	-ms-transform: scale($val)
-	-o-transform: scale($val)
-	transform: scale($val)
-
-//TRANSLATE   -usage +translate(25px)
-@mixin translate($val)
-	-webkit-transform: translate($val)
-	-moz-transform: translate($val)
-	-ms-transform: translate($val)
-	-o-transform: translate($val)
-	transform: translate($val)
-
-//TRANSFORM-ORIGIN    -usage +transform-origin(x-axis y-axis z-axis)
-@mixin transform-origin($val)
-	-webkit-transform-origin: $val
-	-moz-transform-origin: $val
-	-ms-transform-origin: $val
-	transform-origin: $val
-
-//TRANSFORM-STYLE    -usage +transform-style(flat|preserve-3d|initial|inherit)
-@mixin transform-style($val)
-	-webkit-transform-style: $val
-	-moz-transform-style: $val
-	-ms-transform-style: $val
-	transform-style: $val
-
-//PERSPECTIVE  -usage +perspective(500px)
-@mixin perspective($val)
-	-webkit-perspective: $val
-	-moz-perspective: $val
-	-ms-perspective: $val
-	perspective: $val
-
-//PERSPECTIVE-ORIGIN   -usage +perspective-origin(10% 10%)
-@mixin perspective-origin($val)
-	-webkit-perspective-origin: $val
-	-moz-perspective-origin: $val
-	-ms-perspective-origin: $val
-	perspective-origin: $val
+//LINEAR-GRADIENT  -usage +background-image: linear-gradient(red, blue);/ @include linear-gradient(red, blue)
+@mixin linear-gradient($direction, $color-stops...)
+	background: nth(nth($color-stops, 1), 1)
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
+	background: -moz-linear-gradient(legacy-direction($direction), $color-stops)
+	background: -o-linear-gradient(legacy-direction($direction), $color-stops)
+	background: linear-gradient($direction, $color-stops)

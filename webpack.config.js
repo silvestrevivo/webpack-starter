@@ -28,7 +28,7 @@ module.exports = {
             },
             {
                 test: /\.sass$/,
-                loader: 'style-loader!css-loader!sass-loader'
+                loader: 'style-loader!css-loader!postcss-loader!sass-loader'
                 //css/sass loader to import all type style files
             }
         ]
