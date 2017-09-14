@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 //module path require to load the local sever with node
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
         //path to output
         filename: 'bundle.js',
         //this is the result, bundle.js
-        publicPath: ''
+        publicPath: '/dist'
         //public folder
     },
     module: {
