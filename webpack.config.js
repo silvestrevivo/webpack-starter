@@ -13,5 +13,15 @@ module.exports = {
       //this is the result, bundle.js
       publicPath: '/dist'
       //public folder
-  }
+  },
+
+  module: {
+        loaders: [
+            {
+                test: /\.sass$/,
+                loader: 'style-loader!css-loader!sass-loader'
+                //css/sass loader to import all type style files
+            }
+        ]
+    },
 }
