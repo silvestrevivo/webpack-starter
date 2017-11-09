@@ -18,6 +18,12 @@ module.exports = {
   module: {
         loaders: [
             {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+                exclude: /(node_modules)/,
+                loader: 'babel-loader'
+            },
+            {
                 test: /\.sass$/,
                 loader: 'style-loader!css-loader!sass-loader'
                 //css/sass loader to import all type style files
