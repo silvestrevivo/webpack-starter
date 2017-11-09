@@ -1,0 +1,27 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "webpack starter for general projects, for react too",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silvestrevivo/webpack-starter"
+  },
+  "keywords": [
+    "webpack",
+    "starter",
+    "react"
+  ],
+  "author": "@silvestrevivo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvestrevivo/webpack-starter/issues"
+  },
+  "homepage": "https://github.com/silvestrevivo/webpack-starter#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
