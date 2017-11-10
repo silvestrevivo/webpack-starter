@@ -2,6 +2,9 @@
 import '../sass/style.sass';
 import $ from 'jquery';
 
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 $(document).ready(() => {
   let parameters = {
     first: 'template',
@@ -18,3 +21,16 @@ $(document).ready(() => {
   say_Hi();
 
 });
+
+class App extends Component{
+  render() {
+    return (
+      <h1>starter template based on webpack</h1>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
