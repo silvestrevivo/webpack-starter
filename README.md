@@ -1,68 +1,69 @@
-# webpack-starter
-This is a boilerplate code built with WebPack which it could be used as starter project template. It contains Babel to compile ES6 to ES5 as well as CSS and SASS loaders. It comes ready to install dependencies for React and ReactDom. It refreshs automatically through the scripts from the package.json file. CSS files comes with autoprefixer updated following [caniuse][1].
+# WebPack-starter
+---
+This is a boilerplate code built with WebPack which it could be used as starter project template. It contains Babel to compile *ES6* to *ES5* as well as *CSS* and *SASS* loaders. It comes ready to install dependencies for *React* and *ReactDom*. It refreshs automatically through the scripts from the package.json file. CSS files comes with autoprefixer updated following [caniuse][1].
 
-## description
-This template is based on npm package, thus to run it, download the repo to your local computer and then in the folder of your project:
+## How to use it
+---
+This template is based on *npm package*, thus to run it, download the repo to your local computer and then in the folder of your project:
+
+    $ npm install  
+
+    $ npm start
+
+The project will load on the server localhost:3000 using *BrowserSync*. Other usefull commands to know:
+
 ```
-$ npm install      //it reads all the dependencies and downloads the node_modules
-
-$ npm start        //it runs the server on localhost:1234
-
-$ npm run prod     //it compiles the bundle.js to send to production
-```
-If you find problems to load one of the dependencies:
-```
-$ npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save-dev
-
-                                //install the babel loaders to compile ES6 => ES5
-
-$ npm install webpack webpack-dev-server --save-dev      //install webpack dependency
-
-$ npm install style-loader css-loader --save-dev         //install css and style-loader
-
-$ npm install node-sass sass-loader --save-dev           //install sass-loader
+$ npm run build                 It runs WebPack as the most simple way to compile
+$ npm run watch                 It runs WebPack in watch mode
+$ npm run prod                  it compiles the bundle.js to send to production
 ```
 
-## installing `jquery`
-```
-$ npm install jquery -D   //it installs jquery as dependency
-```
-In the file where you want to use it, you have to include:
-```
-import $ from 'jquery'    //this import the library
-```
+## Modules installed
+---
+  + Babel, babel-core, babel-loader, babel-preset-env, babel-preset-react
 
-## installing `React`
-```
-$ npm install react react-dom -D   //it installs React and ReactDom as dependencies
-```
+  + Browser-sync, browser-sync-webpack-plugin
 
-## installing `Isotope`
-```
-$ npm install isotope-layout --D   //it installs Isotope plugin as dependency
-```
+  + Style-loader, css-loader, sass-loader, node-sass.
+
+  + Normalize.css
+
+  + Postcss-loader, lost, rucksack-css, cssnano, autoprefixer, browserslist.
+
+  + Extract-text-webpack-plugin.
+
+  + Webpack-dev-server.
+
+  + Jquery.
+
+  + React, ReactDom.
+
+
+## installing Isotope
+---
+
+  $ npm install isotope-layout --D   //it installs Isotope plugin as dependency
+
 Inside of 'webpack.config.js', we have to add:
-```
-resolve: {
-        alias: {
-        'masonry': 'masonry-layout',
-        'isotope': 'isotope-layout'
-      }
-    }
-```
-In the index.js file you have to add:
-```
-const iso = new Isotope( '.grid', {
-  // options...
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  masonry: {
-    // set to the element
-    columnWidth: '.grid-sizer',
-  }
-});
-```
 
-#### `new updates comming soon`
+  resolve: {
+          alias: {
+          'masonry': 'masonry-layout',
+          'isotope': 'isotope-layout'
+        }
+      }
+
+In the index.js file you have to add:
+
+  const iso = new Isotope( '.grid', {
+    // options...
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      // set to the element
+      columnWidth: '.grid-sizer',
+    }
+  });
+
 
 [1]: http://caniuse.com/
