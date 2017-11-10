@@ -13,8 +13,10 @@ module.exports = {
   output: {
       path: path.join(__dirname, 'dist'),
       // Path to output
-      filename: 'bundle.js'
+      filename: 'bundle.js',
       // This is the result, bundle.js
+      publicPath: '/'
+      // Where the files are available in the server
   },
 
   devtool: 'inline-source-map',
@@ -63,6 +65,6 @@ module.exports = {
         host: 'localhost',
         port: 3000,
         proxy: 'http://localhost:8080/'
-      })  
+      })
     ]
 };
