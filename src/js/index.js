@@ -1,5 +1,5 @@
 //here goes all you want import to the index.html through index.js
-import '../sass/style.sass'
+import '../sass/style.sass';
 
 let parameters = {
   first: 'template',

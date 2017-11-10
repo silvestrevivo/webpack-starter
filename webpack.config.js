@@ -17,24 +17,27 @@ module.exports = {
       // Public folder
   },
 
+  devtool: 'inline-source-map',
+  // Tool to map Sass and javascript
+
   module: {
         rules: [
             {
                 test: /\.css$/,
-                //loader: 'style-loader!css-loader!postcss-loader',
                 use: ExtractTextPlugin.extract({
                   fallback: 'style-loader',
                   use: ['css-loader', 'postcss-loader']
-                  //loader: 'css-loader!postcss-loader'
                 })
             },
             {
                 test: /\.sass$/,
-                //loader: 'style-loader!css-loader!postcss-loader!sass-loader'
                 use: ExtractTextPlugin.extract({
                   fallback: 'style-loader',
-                  use: ['css-loader', 'postcss-loader', 'sass-loader']
-                  //loader: 'css-loader!postcss-loader!sass-loader'
+                  use: [
+                    {loader: 'css-loader', options: {sourceMap: true}},
+                    {loader: 'postcss-loader', options: {sourceMap: true}},
+                    {loader: 'sass-loader', options: {sourceMap: true}}
+                  ]
                 })
             },
             {
