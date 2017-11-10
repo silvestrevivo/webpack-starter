@@ -1,5 +1,6 @@
 //here goes all you want import to the index.html through index.js
 import '../sass/style.sass';
+import 'normalize.css/normalize.css';
 import $ from 'jquery';
 
 import React, { Component } from 'react';
