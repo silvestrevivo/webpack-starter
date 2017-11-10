@@ -2,6 +2,8 @@ const path = require('path');
 // Module path require to define entry and out point, as well as public folder
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // Plugin to create a bundle css apart of javascript
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// Sincrinizing devices to check the site
 
 module.exports = {
   // Entry point to compile and create bundle
@@ -55,7 +57,12 @@ module.exports = {
         ]
     },
     plugins: [
-      new ExtractTextPlugin('style.css')
+      new ExtractTextPlugin('style.css'),
       // Name of the css bundle compiled in the './dist/ folder
+      new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 3000,
+        proxy: 'http://localhost:8080/'
+      })  
     ]
 };
