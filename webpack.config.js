@@ -1,47 +1,70 @@
 const path = require('path');
-//module path require to load the local sever with node
+// Module path require to define entry and out point, as well as public folder
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// Plugin to create a bundle css apart of javascript
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// Sincrinizing devices to check the site
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src') + '/js/index.js',
-    //entry point to compile and create bundle
+  // Entry point to compile and create bundle
+  entry: path.resolve(__dirname, 'src') + '/js/index.js',
 
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        //path to output
-        filename: 'bundle.js',
-        //this is the result, bundle.js
-        publicPath: '/dist'
-        //public folder
-    },
-    module: {
-        loaders: [
+  // Outpoint to compile in bundle.js all the files
+  output: {
+      path: path.join(__dirname, 'dist'),
+      // Path to output
+      filename: 'bundle.js',
+      // This is the result, bundle.js
+      publicPath: '/'
+      // Where the files are available in the server
+  },
+
+  devtool: 'inline-source-map',
+  // Tool to map Sass and javascript
+
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    open: true,
+    compress: true,
+    stats: 'errors-only'
+  },
+  // Webpack Server
+
+  module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  use: ['css-loader', 'postcss-loader']
+                })
+            },
+            {
+                test: /\.sass$/,
+                use: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  use: [
+                    {loader: 'css-loader', options: {sourceMap: true}},
+                    {loader: 'postcss-loader', options: {sourceMap: true}},
+                    {loader: 'sass-loader', options: {sourceMap: true}}
+                  ]
+                })
+            },
             {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
                 exclude: /(node_modules)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                    //loaders included
-                    //for react => $ npm install react react-dom
-                }
-            },
-            {
-                test: /\.sass$/,
-                loader: 'style-loader!css-loader!postcss-loader!sass-loader'
-                //css/sass loader to import all type style files
+                loader: 'babel-loader'
             }
         ]
     },
-    devServer: {
-      //here comes the configuration of the server
-      contentBase: path.join(__dirname, "dist"),
-      //from this url is read the site
-      compress: true,
-      //type of compression
-      port: 1234,
-      //port to see on the browser
-      stats: 'errors-only'
-      //outprint in the terminal just the errors
-    }
+    plugins: [
+      new ExtractTextPlugin('style.css'),
+      // Name of the css bundle compiled in the './dist/ folder
+      new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 3000,
+        proxy: 'http://localhost:8080/'
+      })
+    ]
 };

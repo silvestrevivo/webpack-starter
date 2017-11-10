@@ -1,23 +1,22 @@
 {
   "name": "webpack-starter",
   "version": "1.0.0",
-  "description": "Project starter template built with WebPack",
+  "description": "webpack starter for general projects, for react too",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build",
-    "build": "webpack -d && webpack-dev-server --inline --hot --history-api-fallback",
+    "build": "webpack",
+    "watch": "webpack --progress --watch",
+    "start": "webpack-dev-server --history-api-fallback",
     "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/silvestrevivo/webpack-starter.git"
+    "url": "https://github.com/silvestrevivo/webpack-starter"
   },
   "keywords": [
     "webpack",
-    "npm",
-    "babel",
-    "template"
+    "starter",
+    "react"
   ],
   "author": "@silvestrevivo",
   "license": "ISC",
@@ -26,16 +25,32 @@
   },
   "homepage": "https://github.com/silvestrevivo/webpack-starter#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
     "css-loader": "^0.28.7",
-    "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.6",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "lost": "^8.2.0",
+    "node-sass": "^4.6.0",
+    "postcss-loader": "^2.0.8",
+    "rucksack-css": "^1.0.2",
     "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.5.6",
-    "webpack-dev-server": "^2.7.1"
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
   }
 }

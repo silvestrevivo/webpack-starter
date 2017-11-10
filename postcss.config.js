@@ -1,5 +1,8 @@
 module.exports = {
-  plugins: [
-    require('autoprefixer')
-  ]
+  plugins: {
+    'rucksack-css': {},
+    'lost': {},
+    'autoprefixer': {},
+    'cssnano': {}
+  }
 };

@@ -9,10 +9,13 @@
   	<meta name="author" content="@silvestrevivo">
   	<meta keywords="here go words for SEO-Goole">
     <meta name="generator" content="webpack2">
-  	<link rel="icon" type="image/x-icon" href="/app/img/favicon.ico">
+  	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- Custom Fonts/Design -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+    <!-- CSS compiled from Webpack with ExtractWebpackPlugin -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,7 +28,7 @@
   <body>
 
     <div class="container">
-      <h1>starter template based on webpack</h1>
+      <div id="root"></div>
       <img src="https://webpack.js.org/6bc5d8cf78d442a984e70195db059b69.svg" alt="webpack-logo">
       <footer>
         <small>Developed by @silvestrevivo</small>
@@ -33,7 +36,7 @@
     </div>
 
     <!-- bundle from webpack -->
-    <script src="bundle.js"></script>
+    <script src="/bundle.js"></script>
 
   </body>
 </html>
