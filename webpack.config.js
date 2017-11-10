@@ -9,7 +9,7 @@ module.exports = {
 
   // Outpoint to compile in bundle.js all the files
   output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.join(__dirname, 'dist'),
       // Path to output
       filename: 'bundle.js',
       // This is the result, bundle.js
@@ -21,7 +21,10 @@ module.exports = {
   // Tool to map Sass and javascript
 
   devServer: {
-    contentBase: './dist'
+    contentBase: path.join(__dirname, 'dist'),
+    open: true,
+    compress: true,
+    stats: 'errors-only'
   },
   // Webpack Server
 
