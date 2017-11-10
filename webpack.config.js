@@ -20,6 +20,11 @@ module.exports = {
   devtool: 'inline-source-map',
   // Tool to map Sass and javascript
 
+  devServer: {
+    contentBase: './dist'
+  },
+  // Webpack Server
+
   module: {
         rules: [
             {
