@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --progress --watch",
-    "start": "webpack -d && webpack-dev-server --inline --hot",
+    "start": "webpack-dev-server --history-api-fallback",
     "prod": "webpack -p"
   },
   "repository": {

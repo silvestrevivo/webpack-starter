@@ -11,10 +11,8 @@ module.exports = {
   output: {
       path: path.join(__dirname, 'dist'),
       // Path to output
-      filename: 'bundle.js',
+      filename: 'bundle.js'
       // This is the result, bundle.js
-      publicPath: '/dist'
-      // Public folder
   },
 
   devtool: 'inline-source-map',
