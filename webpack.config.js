@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+// Module to provide plugins by default, in this case jQuery
 const path = require('path');
 // Module path require to define entry and out point, as well as public folder
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -64,6 +66,10 @@ module.exports = {
         host: 'localhost',
         port: 3000,
         proxy: 'http://localhost:8080/'
-      })
+        }),
+      new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery'
+        })
     ]
 };
