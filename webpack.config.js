@@ -56,6 +56,10 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 exclude: /(node_modules)/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?[\s\S]+)?$/,
+                use: 'file-loader?name=bgimages/[name].[ext]',
             }
         ]
     },
