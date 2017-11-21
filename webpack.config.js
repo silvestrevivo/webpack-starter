@@ -24,7 +24,6 @@ module.exports = {
 
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    open: true,
     compress: true,
     stats: 'errors-only'
   },
