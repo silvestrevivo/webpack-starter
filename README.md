@@ -1,6 +1,6 @@
 # WebPack-starter
 
-This is a boilerplate code built with WebPack which it could be used as starter project template. It contains Babel to compile *ES6* to *ES5* as well as *CSS* and *SASS* loaders. It comes ready to install dependencies for *React* and *ReactDom*. It refreshs automatically through the scripts from the package.json file. CSS files comes with autoprefixer updated following [caniuse][1].
+This is a code boilerplate built with WebPack which it could be used as starter project template. It contains Babel to compile *ES6* to *ES5* as well as *CSS* and *SASS* loaders. It comes ready to install dependencies for *React* and *ReactDom*. It refreshs automatically through the scripts from the package.json file and *BrowserSync* plugin. CSS files come with autoprefixer updated following [caniuse][1] and using *Postcss*. 
 
 ## How to use it
 
