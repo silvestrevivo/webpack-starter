@@ -1,10 +1,8 @@
 // here goes all you want import to the index.html through index.js
-/* jslint browser: true */ /* global  $ */
-import '../sass/style.sass';
-import 'normalize.css/normalize.css';
-
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css/normalize.css';
+import '../sass/style.sass';
 
 $(document).ready(() => {
     const parameters = {
