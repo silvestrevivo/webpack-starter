@@ -1,6 +1,7 @@
 // here goes all you want import to the index.html through index.js
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { TweenLite } from 'gsap';
 import 'normalize.css/normalize.css';
 import '../sass/style.sass';
 
@@ -18,6 +19,9 @@ $(document).ready(() => {
     };
 
     sayHi();
+
+    const header = $('h1');
+    TweenLite.to(header, 1, { opacity: 3, y: 0 });
 });
 
 class App extends Component {
