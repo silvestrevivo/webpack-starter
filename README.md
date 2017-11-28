@@ -2,7 +2,7 @@
 
 This is a code boilerplate built with WebPack which it could be used as starter project template. It
 contains Babel to compile _ES6_ to _ES5_ as well as _CSS_ and _SASS_ loaders. It comes ready to
-install dependencies for _React_ and _ReactDom_. It refreshs automatically through the scripts from
+install dependencies for _React_ and _ReactDOM_. It refreshs automatically through the scripts from
 the package.json file and _BrowserSync_ plugin. CSS files come with autoprefixer updated following
 [caniuse][1] and using _Postcss_. It comes provided with ESLint and Prettier too, following rules
 and stylesheet of [Airbnb][2].
@@ -47,11 +47,19 @@ $ npm run prod                  it compiles the bundle.js to send to production
 
 * ESLint and Prettier.
 
+## installing Bootstrap3
+
+    Explanation about installation in another branch => bootstrap3
+
+## installing Bootstrap4
+
+    Explanation about installation in another branch => bootstrap4
+
 ## installing Isotope
 
-    $ npm install isotope-layout --D   //it installs Isotope plugin as dependency
+    $ npm install isotope-layout --D
 
-Inside of 'webpack.config.js', we have to add:
+Inside of 'webpack.config.js', you have to add:
 
     resolve: {
             alias: {
