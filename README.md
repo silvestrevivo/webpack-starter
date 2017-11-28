@@ -45,6 +45,8 @@ $ npm run prod                  it compiles the bundle.js to send to production
 
 * React and ReactDom.
 
+* TweenMax - GASP for animation.
+
 * ESLint and Prettier.
 
 ## installing Bootstrap3
