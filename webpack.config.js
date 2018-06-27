@@ -6,6 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // Plugin to create a bundle css apart of javascript
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 // Sincrinizing devices to check the site
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+// Cleans up the files inside dist folder are not gonna be used
 
 module.exports = {
     // Entry point to compile and create bundle
@@ -71,6 +73,7 @@ module.exports = {
             port: 3000,
             proxy: 'http://localhost:8080/',
         }),
+        new CleanWebpackPlugin(['dist/*.js', 'dist/*.css'], { exclude: ['img/favicon.ico'] }),
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
