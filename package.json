@@ -1,7 +1,7 @@
 {
     "name": "webpack-starter",
     "version": "1.0.0",
-    "description": "webpack starter for general projects, for react too",
+    "description": "webpack starter for react projects",
     "main": "index.js",
     "scripts": {
         "build": "webpack",
@@ -13,7 +13,11 @@
         "type": "git",
         "url": "https://github.com/silvestrevivo/webpack-starter"
     },
-    "keywords": ["webpack", "starter", "react"],
+    "keywords": [
+        "webpack",
+        "starter",
+        "react"
+    ],
     "author": "@silvestrevivo",
     "license": "ISC",
     "bugs": {
@@ -22,7 +26,7 @@
     "homepage": "https://github.com/silvestrevivo/webpack-starter#readme",
     "devDependencies": {
         "autoprefixer": "^7.1.6",
-        "babel-core": "^6.26.0",
+        "babel-core": "^6.26.3",
         "babel-eslint": "^8.0.2",
         "babel-loader": "^7.1.2",
         "babel-preset-env": "^1.6.1",
@@ -47,7 +51,10 @@
         "webpack": "^3.8.1",
         "webpack-dev-server": "^2.9.4"
     },
-    "browserslist": ["> 1%", "last 2 versions"],
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ],
     "dependencies": {
         "gsap": "^1.20.3",
         "jquery": "^3.2.1",
