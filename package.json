@@ -57,6 +57,7 @@
         "last 2 versions"
     ],
     "dependencies": {
+        "babel-preset-stage-1": "^6.24.1",
         "jquery": "^3.2.1",
         "normalize.css": "^7.0.0",
         "prop-types": "^15.6.2",

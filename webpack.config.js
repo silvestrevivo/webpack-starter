@@ -9,6 +9,8 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 // Cleans up the files inside dist folder are not gonna be used
 
+const port = process.env.PORT || 3000;
+
 module.exports = {
     // Entry point to compile and create bundle
     entry: `${path.resolve(__dirname, 'src')}/js/index.js`,
